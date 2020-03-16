@@ -1,0 +1,79 @@
+*{
+  font-size: 14px;
+}
+
+
+.this-div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+.loadingDiv{
+	width:300px;
+	position:relative;
+	text-align:center;
+}
+
+.vba-list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.vba-badge {
+  background-color: #d1dade;
+  color: #5e5e5e;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  text-shadow: none;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+.vba-list-group-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.vba-list-group-item {
+  background-color: inherit;
+  
+  display: block;
+  margin-bottom: -1px;
+  padding: 10px 15px;
+  position: relative;
+}
+.vba-list-group-item>.vba-badge {
+  float: right;
+}
+.vba-label-primary, .vba-badge-primary {
+  background-color: #23b7e5;
+  color: #FFFFFF;
+}
+.vba-label-info, .vba-badge-info {
+  background-color: #23c6c8;
+  color: #FFFFFF;
+}
+.vba-label-danger, .vba-badge-danger {
+  background-color: #ed5565;
+  color: #FFFFFF;
+}
+.vba-label-success, .vba-badge-success {
+  background-color: #1c84c6;
+  color: #FFFFFF;
+}
+.vba-label-warning, .vba-badge-warning {
+  background-color: #8a6d3b;
+  color: #FFFFFF;
+}
+
+

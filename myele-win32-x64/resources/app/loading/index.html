@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="static/css/styleCircle.css?v=11">
+  <!--
+	<script>
+		var now = new Date().getTime();
+		document.write('<link href="./css/today.css?v=' + now + '" rel="stylesheet" type="text/css"/>');
+	</script> 
+  -->
+  <style>
+	body {
+	 background: radial-gradient(200% 100% at bottom center, #f0ebf1, #bdadc1, #9e7ca5, #3483ab);
+	 background: radial-gradient(220% 105% at top center, #3483ab 10%, #9e7ca5 60%, #bdadc1 85%, #f0ebf1);
+	background-attachment: fixed;
+	overflow: hidden;
+	}
+
+	@keyframes rotate {
+	0% {
+		transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+	}
+	100% {
+		transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+	}
+	}
+	.stars {
+		transform: perspective(500px);
+		transform-style: preserve-3d;
+	position: absolute;
+	bottom: 0;
+	perspective-origin: 50% 100%;
+	left: 50%;
+	animation: rotate 90s infinite linear;
+	}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background: #F7F7B6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0 -300px;
+  transform: translate3d(0, 0, -300px);
+  backface-visibility: hidden;
+} 
+
+  </style>
+  
+  <title>加载程序</title>
+</head>
+<body>
+	 <div class="stars"></div>  <!--背景层，不要删除，不然没有作用-->
+		 
+				<div class="this-div">			
+				<canvas id="le-canvas" ></canvas>
+				<div id="loadingDiv" class="loadingDiv">正在检测运行环境...</div>
+				<br>
+					<div class="loadingDiv">
+					<hr>
+						<font color="white">Copyright © 2020-2021 www.aly1.wang. All Rights Reserved.</font>
+					</div>
+				
+				</div> 
+    
+  <script src="static/js/encapsulation_class.js?v=11"></script>
+  <script>
+    var canvas_1 = new EnableCircle({
+    id:'le-canvas', // 节点标签 [必填] id选择器
+    value: 99, // 百分比值 [必填] 
+    bgColor: '', // 背景颜色 十六进制 [可填] 默认为透明;  当填了type的vba_color 或target的 可不填
+    cirColor: '#e54d42', // 进度条颜色 十六进制 [必填] 当填了type的vba_color 或target的 可不填
+    textColor: '#f37b1d', // 字体颜色 十六进制 [必填] 当填了type的vba_color 或target的 可不填
+    type: 'vba_color', // 样式 [可填] 默认:none 样式可选: shadow (添加阴影);vba_color(优先级最高特殊样式) none (无)
+    lineCap: 'round', // 进度条末端类型 [可填] 默认:butt (平滑);round (圆形线帽) 
+    target: 'primary', // 进度条指定类型 [可填] 默认: default 
+    size: 60,// 环形半径 [可填] 默认: 40
+    lineWidth: 14, // 进度条宽度 [可填] 默认: 8 最高60
+    open: 'top' // 进度条开始点 [可填] 默认: top 可选 bottom 、top 、between
+	  
+    }) 
+  </script>
+  <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script>
+$(document).ready(function(){
+  var stars=800;  /*星星的密集程度，数字越大越多*/
+  var $stars=$(".stars");
+  var r=800;   /*星星的看起来的距离,值越大越远,可自行调制到自己满意的样子*/
+  for(var i=0;i<stars;i++){
+    var $star=$("<div/>").addClass("star");
+    $stars.append($star);
+  }
+  $(".star").each(function(){
+    var cur=$(this);
+    var s=0.2+(Math.random()*1);
+    var curR=r+(Math.random()*300);
+    cur.css({ 
+      transformOrigin:"0 0 "+curR+"px",
+      transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+       
+    })
+  })
+})
+</script>
+</body>
+</html>

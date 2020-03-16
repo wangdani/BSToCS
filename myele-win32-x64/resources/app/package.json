@@ -1,0 +1,17 @@
+{
+  "name": "myele",
+  "version": "1.0.0",
+  "description": "a cs app",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .", 
+	"pack": "electron-packager ./ --win --out myele1 --arch=x64 --overwrite --ignore=node_modules  --icon=wanghe.ico" ,
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wang he",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.1.1",
+    "electron-packager": "^14.2.1"
+  }
+}
