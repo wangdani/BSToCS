@@ -8,7 +8,8 @@
 
 pro文件夹位置为[myele-win32-x64\resources\app\pro](./myele-win32-x64/resources/app/pro)
 
-点击myele-win32-x64的myele.exe文件夹后，会先出现loading界面，然后进入主界面
+使用方法:
+下载后，点击myele-win32-x64的[myele.exe](./myele-win32-x64/myele.exe)文件
 
 
 演示图如下：
