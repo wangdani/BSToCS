@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset=utf-8> 
- 
-
-<title>页面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>首页</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	overflow: hidden;
+}
+</style>
+<link href="css/font.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-search.css" media="screen" type="text/css" /> 
 </head>
-<body> 	 
-	<br><hr><br>
+
+<body>
+<canvas id="canvas" width="1280" height="1024"> 当前系统不支持canvas </canvas>
+<script src="js/word.js"></script>
+<p id="offscreen-text" class="offscreen-text"></p>
+<p id="text" class="text"></p>
+<!--<svg id="svg" > </svg>-->
+
+<div id="d" class="webdesigntuts-workshop">  
+ <br><hr><br>
 	<p> 若为静态网页程序</p>
 	<p> 
 		<b>操作方法:</b>
@@ -33,7 +51,11 @@
 		url写你自己程序的地址即可
 	</p>
 	
-	<br><hr><br>
-		 
+	<br><hr><br> 
+  
+</div>
+
+<script  src='js/index.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
 </body>
 </html>
