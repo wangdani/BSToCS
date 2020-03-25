@@ -15,7 +15,6 @@ pro文件夹位置为[myele-win32-x64\resources\app\pro](./myele-win32-x64/resou
 演示图如下：
 一，loading演示图
 ![loading演示图](http://www.aly1.wang/media/img/cstods/loading3.jpg)
-![loading演示图](http://www.aly1.wang/media/img/cstods/loading2.jpg)
 ![loading演示图](http://www.aly1.wang/media/img/cstods/loading1.jpg)
 
 二，主界面演示图
